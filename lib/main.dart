@@ -1,18 +1,16 @@
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:testing/stories_page.dart';
+import 'package:testing/text.dart';
 
+import 'animation/animation.dart';
+import 'animation/home.dart';
 import 'home.dart';
 
-List<CameraDescription> cameras = [];
+
 
 Future<void> main() async{
-  try {
-    WidgetsFlutterBinding.ensureInitialized();
-    cameras = await availableCameras();
-  } on CameraException catch (e) {
-    debugPrint('CameraError: ${e.description}');
-  }
+
   runApp(const MyApp());
 }
 
@@ -31,9 +29,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: ViewScreen(),
     );
   }
 }
+
+
 
 
