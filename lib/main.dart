@@ -3,7 +3,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:testing/stories_page.dart';
 import 'package:testing/text.dart';
 
-import 'animation/animation.dart';
+import 'animation/animation1.dart';
 import 'animation/home.dart';
 import 'home.dart';
 
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ViewScreen(),
+        home: ViewScreen(),
     );
   }
 }
